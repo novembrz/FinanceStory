@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K4j-Tj-s6L">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="ULx-pg-U6L">
+            <objects>
+                <viewController id="K4j-Tj-s6L" customClass="MenuViewController" customModule="FinanceStory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I2n-WW-Myz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текущий баланс" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvg-Fv-7j7">
+                                <rect key="frame" x="40" y="104" width="154" height="22"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="18"/>
+                                <color key="textColor" red="0.1843137255" green="0.18039215689999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="53 804 ₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mO2-Yc-wHR">
+                                <rect key="frame" x="40" y="141" width="192" height="48.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="40"/>
+                                <color key="textColor" red="0.1843137255" green="0.18039215689999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8hm-OK-994">
+                                <rect key="frame" x="0.0" y="219.66666666666669" width="375" height="220.66666666666669"/>
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="K6r-WK-bYa">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="menuCell" id="0yB-4l-zxh" customClass="MenuCell" customModule="FinanceStory" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CHb-xv-C94">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="K4j-Tj-s6L" id="aNz-QS-NnX"/>
+                                    <outlet property="delegate" destination="K4j-Tj-s6L" id="1mm-VO-eTu"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Расходы за месяц" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boO-FG-Xn3">
+                                <rect key="frame" x="40" y="485.33333333333331" width="167" height="22"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="18"/>
+                                <color key="textColor" red="0.1843137255" green="0.18039215689999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24 912 ₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGr-Yf-yxx">
+                                <rect key="frame" x="40" y="522.33333333333337" width="192" height="48.666666666666629"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="40"/>
+                                <color key="textColor" red="0.1843137255" green="0.18039215689999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G7y-QW-0ne" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="92" y="611" width="191" height="191"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="G7y-QW-0ne" secondAttribute="height" multiplier="1:1" id="b2q-ss-c2G"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CPn-f0-naf"/>
+                        <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zGr-Yf-yxx" firstAttribute="top" secondItem="boO-FG-Xn3" secondAttribute="bottom" constant="15" id="3WS-AW-t6z"/>
+                            <constraint firstItem="CPn-f0-naf" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="boO-FG-Xn3" secondAttribute="trailing" constant="207" id="Abg-08-4dA"/>
+                            <constraint firstItem="8hm-OK-994" firstAttribute="top" secondItem="mO2-Yc-wHR" secondAttribute="bottom" constant="30" id="Agj-L4-BtO"/>
+                            <constraint firstItem="zGr-Yf-yxx" firstAttribute="leading" secondItem="boO-FG-Xn3" secondAttribute="leading" id="GCy-zO-2qc"/>
+                            <constraint firstItem="8hm-OK-994" firstAttribute="leading" secondItem="CPn-f0-naf" secondAttribute="leading" id="I8O-1W-BbG"/>
+                            <constraint firstItem="mO2-Yc-wHR" firstAttribute="top" secondItem="hvg-Fv-7j7" secondAttribute="bottom" constant="15" id="L3I-gh-6XZ"/>
+                            <constraint firstItem="boO-FG-Xn3" firstAttribute="leading" secondItem="CPn-f0-naf" secondAttribute="leading" constant="40" id="LWy-gq-FnI"/>
+                            <constraint firstItem="G7y-QW-0ne" firstAttribute="leading" secondItem="CPn-f0-naf" secondAttribute="leading" constant="92" id="Oc8-nm-YHX"/>
+                            <constraint firstItem="8hm-OK-994" firstAttribute="height" secondItem="I2n-WW-Myz" secondAttribute="height" multiplier="0.271739" id="P7Q-wK-hOn"/>
+                            <constraint firstItem="8hm-OK-994" firstAttribute="trailing" secondItem="CPn-f0-naf" secondAttribute="trailing" id="SUM-mz-DXM"/>
+                            <constraint firstItem="CPn-f0-naf" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="mO2-Yc-wHR" secondAttribute="trailing" constant="182" id="SW6-nU-QfW"/>
+                            <constraint firstItem="boO-FG-Xn3" firstAttribute="top" secondItem="8hm-OK-994" secondAttribute="bottom" constant="45" id="V9L-gt-TV5"/>
+                            <constraint firstItem="mO2-Yc-wHR" firstAttribute="leading" secondItem="hvg-Fv-7j7" secondAttribute="leading" id="ebh-ai-qaW"/>
+                            <constraint firstItem="G7y-QW-0ne" firstAttribute="top" secondItem="zGr-Yf-yxx" secondAttribute="bottom" constant="40" id="gOL-y3-hxi"/>
+                            <constraint firstItem="CPn-f0-naf" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="hvg-Fv-7j7" secondAttribute="trailing" constant="220" id="ipm-Cw-8Vd"/>
+                            <constraint firstItem="CPn-f0-naf" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="zGr-Yf-yxx" secondAttribute="trailing" constant="182" id="ipr-5B-ZO5"/>
+                            <constraint firstItem="CPn-f0-naf" firstAttribute="trailing" secondItem="G7y-QW-0ne" secondAttribute="trailing" constant="92" id="keA-RL-C83"/>
+                            <constraint firstItem="hvg-Fv-7j7" firstAttribute="leading" secondItem="CPn-f0-naf" secondAttribute="leading" constant="40" id="mBT-iC-DYl"/>
+                            <constraint firstItem="hvg-Fv-7j7" firstAttribute="top" secondItem="CPn-f0-naf" secondAttribute="top" constant="60" id="uuc-WX-bAq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="8hm-OK-994" id="21u-ET-In7"/>
+                        <outlet property="currentBalanceLabel" destination="mO2-Yc-wHR" id="N1J-hr-2Ej"/>
+                        <outlet property="expensesLabel" destination="zGr-Yf-yxx" id="q1B-x2-ek0"/>
+                        <outlet property="pieChart" destination="G7y-QW-0ne" id="fHB-jN-3kV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eNl-fd-8S6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-646.37681159420299" y="76.630434782608702"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
